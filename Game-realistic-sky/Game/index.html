@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#142b23" />
+  <meta name="description" content="A funny 3D runner through village rivers, mountains and school-day chaos." />
+  <title>Dadaji's Impossible School Journey</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loading-screen" role="dialog" aria-modal="true" aria-labelledby="game-title">
+    <div class="card start-card">
+      <div class="brand-line"><span class="brand-mark">✦</span> DESI CHAOS RUNNER <span class="version-tag">3D · V3</span></div>
+      <div class="hero-art" aria-hidden="true"><span>🎒</span><span class="hero-dada">👴</span><span>🐃</span></div>
+      <h1 id="game-title">Dadaji's <em>Impossible</em><br />School Journey</h1>
+      <p class="tag">“हमारे ज़माने में तो 15 km पैदल जाते थे!”</p>
+      <div class="chapter-strip"><span>01</span><div><strong>Dadaji's barefoot era</strong><small>Jungle · River · Mountain · Sunday school</small></div></div>
+      <div class="chapter-strip"><span>02</span><div><strong>Papa's bicycle era</strong><small>Ring the bell. Dodge the chaos. Beat the clock.</small></div><b>UNLOCKABLE</b></div>
+      <div class="personal-best" aria-label="Personal best stats"><span>🏁 Best distance <strong id="best-distance">0 m</strong></span><span>🪙 Best coins <strong id="best-coins">0</strong></span></div>
+      <p id="loader-prog" class="loader-status">Your journey is ready.</p>
+      <button id="start-btn" class="primary-btn" type="button">START THE JOURNEY <span aria-hidden="true">→</span></button>
+      <div class="controls-guide"><div><kbd>←</kbd><kbd>→</kbd><span>Switch lanes</span></div><div><kbd>↑</kbd><span>Jump</span></div><div><kbd>↓</kbd><span>Slide</span></div></div>
+      <p class="mobile-hint">📱 Phone? Swipe left/right to move, swipe up to jump, swipe down to slide. Or use the buttons below.</p>
+      <p class="sound-hint">Hindi dialogue & sound effects · Use 🔊 in-game to mute</p>
+    </div>
+    <div class="ambient-shape shape-a" aria-hidden="true"></div><div class="ambient-shape shape-b" aria-hidden="true"></div>
+  </div>
+  <canvas id="game-canvas" aria-label="3D endless runner game"></canvas>
+  <div id="touch-controls" aria-label="Touch controls">
+    <button type="button" id="touch-left" aria-label="Move left">←</button>
+    <button type="button" id="touch-jump" aria-label="Jump">JUMP</button>
+    <button type="button" id="touch-slide" aria-label="Slide">↓</button>
+    <button type="button" id="touch-right" aria-label="Move right">→</button>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/objects/Sky.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
